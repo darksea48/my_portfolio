@@ -26,7 +26,7 @@ Este es un portafolio profesional desarrollado para mostrar mis experiencias, pr
 ```
 DSZ-portafolio/
 ├── css/
-│   └── estilos.css
+│   └── styles.css
 ├── img/
 │   └── my-profile.jpg
 ├── js/

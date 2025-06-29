@@ -1,0 +1,416 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1300px; /* Ancho máximo para el contenido principal */
+    background-color: #fff;
+    border-radius: 0px 0px 8px 8px; /* Bordes redondeados solo en la parte inferior */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Para contener los elementos redondeados */
+    margin: auto; /* Centrar el contenedor */
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 30px;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box; /* Incluir padding en el ancho */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+}
+
+.header-left {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 20px; /* Espacio entre Perfil y la navegación */
+}
+
+.header-nav {
+    flex-grow: 1; /* Permite que la navegación ocupe el espacio restante */
+    display: flex;
+    justify-content: flex-end; /* Centrar los elementos de navegación */
+}
+
+.header-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+}
+
+.header-nav li {
+    margin-right: 25px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+    color: #007bff; /* Un azul para el hover */
+}
+
+.header-button {
+    background-color: #d34654; /* Cerrar sesión */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+    background-color: #ff0000;
+}
+.prueba{
+    color: #006eff; /* Color de prueba */
+}
+
+/* Contenido principal */
+.main-content {
+    display: flex;
+    padding: 20px;
+    gap: 20px; /* Espacio entre la columna izquierda y la derecha */
+    flex-wrap: wrap; /* Permitir que las columnas se envuelvan en pantallas pequeñas */
+}
+
+.profile-column {
+    flex: 2; /* Ocupa más espacio en la izquierda */
+    min-width: 300px; /* Ancho mínimo para la columna del perfil */
+}
+
+.sidebar-column {
+    flex: 1; /* Ocupa menos espacio en la derecha */
+    min-width: 280px;
+}
+
+/* Tarjeta de perfil */
+.profile-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-banner {
+    height: 120px;
+    background-color: #20b2aa; /* Color azul verdoso similar al de la imagen */
+    border-radius: 8px 8px 0 0; /* Bordes redondeados solo arriba */
+    margin: -20px -20px 20px -20px; /* Ajustar para que se extienda a los bordes */
+    position: relative; /* Para posicionar la imagen */
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    position: absolute;
+    top: 70px; /* Ajustar posición para que se superponga al banner */
+    left: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    padding-top: 50px; /* Espacio para la imagen de perfil superpuesta */
+}
+
+.profile-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.profile-location, .profile-title {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.profile-bio {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.5;
+    margin-top: 15px;
+}
+
+.edit-profile-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.edit-profile-link::before {
+    content: '⚙️'; /* Icono de engranaje para "Edit profile" */
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+
+/* Sección de Educación */
+.education-card, .work-experience-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.education-card h3::before {
+    content: '🎓'; /* Icono de graduación para "Education" */
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.work-experience-card h3::before {
+    content: '💼'; /* Icono de maletín para "Work Experience" */
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.work-experience-card {
+    margin-bottom: 20px; /* Espacio entre tarjetas de experiencia laboral y Antecedentes educacionales*/
+}
+
+.education-card h3, .work-experience-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.education-item {
+    margin-bottom: 15px;
+}
+
+.education-item:last-child {
+    margin-bottom: 0;
+}
+
+.education-degree {
+    font-weight: bold;
+    color: #555;
+}
+
+.education-date {
+    font-size: 14px;
+    color: #777;
+    margin-top: 2px;
+}
+
+.education-details {
+    font-size: 15px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Tarjetas de la barra lateral */
+.sidebar-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.connection-request-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.connection-request-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid #eee;
+}
+
+.connection-request-item span {
+    flex-grow: 1;
+    font-weight: 500;
+    color: #444;
+}
+
+.connection-actions button {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.connection-actions .accept-button {
+    color: green;
+    border-color: green;
+}
+
+.connection-actions .accept-button:hover {
+    background-color: rgba(0, 128, 0, 0.1);
+}
+
+.connection-actions .decline-button {
+    color: red;
+    border-color: red;
+}
+
+.connection-actions .decline-button:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.your-connections-list .connection-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.your-connections-list .connection-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid #eee;
+}
+
+.your-connections-list .connection-item span {
+    font-weight: 500;
+    color: #444;
+}
+.minitext{
+    color: #ff0000; /* Color rojo para el texto pequeño */
+    font-size: 11px; /* Tamaño de fuente más pequeño */
+}
+/* Footer */
+.footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    margin-top: 20px; /* Espacio entre el contenido principal y el pie de página */
+    box-sizing: border-box; /* Incluir padding en el ancho */
+    width: 100%; /* Asegurar que el pie de página ocupe todo el ancho */
+}
+.footer p {
+    margin: 0;
+    font-size: 12pt;
+    color: #ccc;
+    padding: 5px 0; /* Espacio interno para el texto del pie de página */
+}
+
+/* Media Queries para adaptabilidad */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .header-nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .header-nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .header-button {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .main-content {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .profile-column, .sidebar-column {
+        min-width: unset; /* Quitar el min-width para permitir que ocupe todo el ancho */
+        width: 100%; /* Ocupar todo el ancho disponible */
+    }
+
+    .profile-banner {
+        height: 100px; /* Un poco más pequeño en móvil */
+    }
+
+    .profile-picture {
+        top: 60px; /* Ajuste para la imagen de perfil en móvil */
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-info {
+        padding-top: 40px; /* Ajuste para el padding en móvil */
+    }
+
+    .profile-name {
+        font-size: 24px;
+    }
+
+    .profile-location, .profile-title {
+        font-size: 15px;
+    }
+
+    .profile-bio {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        border-radius: 0; /* Bordes rectos en pantallas muy pequeñas */
+        box-shadow: none; /* Sin sombra en pantallas muy pequeñas */
+    }
+
+    .header {
+        padding: 10px 15px;
+    }
+
+    .header-left {
+        font-size: 20px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+}

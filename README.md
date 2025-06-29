@@ -46,7 +46,7 @@ DSZ-portafolio/
 
 - Puedes modificar la información de perfil, proyectos, experiencia y habilidades editando el archivo `index.html`.
 - Las imágenes de perfil y contactos pueden ser reemplazadas en la carpeta `img/`.
-- Los estilos personalizados están en `css/estilos.css`.
+- Los estilos personalizados están en `css/styles.css`.
 - La lógica de interacción (conexiones, alertas) está en `js/scripts.js`.
 
 ## Créditos

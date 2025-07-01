@@ -102,7 +102,7 @@ header {
 }
 
 /* Tarjeta de perfil y sidebar: usa card de Bootstrap */
-.profile-card, .sidebar-card, .education-card, .work-experience-card, .project-card {
+.profile-card, .sidebar-card, .box-section-card, .work-experience-card, .project-card {
     background-color: #fff;
     border-radius: 0.5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -170,7 +170,7 @@ header {
     margin-right: 0.5rem;
 }
 
-.education-card h3::before {
+.box-section-card h3::before {
     content: '🎓';
     margin-right: 0.5rem;
 }
@@ -179,23 +179,23 @@ header {
     margin-right: 0.5rem;
 }
 
-.education-item, .connection-request-item, .your-connections-list .connection-item {
+.box-section-item, .connection-request-item, .your-connections-list .connection-item {
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
 }
 
-.education-degree {
+.box-section-degree {
     font-weight: bold;
     color: #555;
     margin-bottom: 0;
 }
-.education-date {
+.box-section-date {
     font-size: 0.9rem;
     color: #adb5bd;
     margin-bottom: 10px;
 }
-.education-details {
+.box-section-details {
     font-size: 1rem;
     color: #6c757d;
 }
